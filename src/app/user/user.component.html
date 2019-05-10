@@ -1,0 +1,36 @@
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">All User</h4>
+        <p class="card-description">
+        </p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Money</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+           
+                  <tr *ngFor="let user of users">
+                      <td>{{user.id}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.email}}</td>
+                      <td><input [(ngModel)]="user.money" type="number" value="{{user.money}}"></td>
+                      <td> <button type="button" class="btn btn-success btn-fw" (click)="updateUser(user)">Update</button></td>
+                     
+                    </tr>
+      
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
