@@ -28,7 +28,7 @@
     "font-awesome": "^4.7.0",
     "mdi": "^2.2.43",
     "rxjs": "~6.2.0",
-    "rxjs-compat": "^6.3.3",
+    "rxjs-compat": "^6.5.2",
     "typescript": "~2.9.2",
     "zone.js": "~0.8.26"
   },
