@@ -1,0 +1,40 @@
+<div class="col-lg-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">New Product</h4>
+      <p class="card-description">
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Id Seller</th>
+              <th>Id Bidder</th>
+              <th>Id Product</th>
+              <th>Day end</th>
+              <th>Price</th>
+
+             
+            </tr>
+          </thead>
+          <tbody>
+         
+                <tr *ngFor="let bill of bills">
+                    <td>{{bill.id_bill}}</td>
+                    <td>{{bill.id_seller}}</td>
+                  
+                    <td>{{bill.id_bidder}}</td>
+                    <td>{{bill.id_product}}</td>
+                    <td>{{bill.datetime}}</td>
+                    <td>{{bill.price}}</td>
+                    
+                  </tr>
+    
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

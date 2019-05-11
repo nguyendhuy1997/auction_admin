@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserServiceService} from '../../service/user_service/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -8,14 +9,21 @@ import {UserServiceService} from '../../service/user_service/user-service.servic
 })
 export class UserComponent implements OnInit {
 
-  constructor(private UserService:UserServiceService) { }
+  constructor(private UserService:UserServiceService,private router: Router) { }
   users:any;
   ngOnInit() {
-    this.UserService.getUser().subscribe(data=>{
-      this.users=data;
-      console.log(this.users);
-
-    })
+    if(localStorage.getItem('email')==null)
+    {
+      this.router.navigate(['']);
+    }
+    else{
+      this.UserService.getUser().subscribe(data=>{
+        this.users=data;
+        console.log(this.users);
+  
+      })
+    }
+   
   }
   updateUser(user){
     this.UserService.updateUser(user).subscribe(data=>{

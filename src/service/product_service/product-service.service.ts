@@ -13,6 +13,9 @@ export class ProductServiceService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>('http://127.0.0.1:8000/admin/getproduct');
   };
+  getBill(): Observable<any[]> {
+    return this.http.get<any[]>('http://127.0.0.1:8000/admin/getbill');
+  };
   accept(id_product:string):Observable<any>{
     const product={
       id_product:id_product

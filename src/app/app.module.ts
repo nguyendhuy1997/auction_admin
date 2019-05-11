@@ -31,6 +31,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
+import { BillComponent } from './bill/bill.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { UserComponent } from './user/user.component';
     TabsComponent,
     ProductComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    BillComponent
   ],
   imports: [
     BrowserModule,

@@ -20,10 +20,12 @@ import { TabsComponent } from './tabs/tabs.component';
 import {ProductComponent} from './product/product.component';
 import {LoginComponent} from './login/login.component';
 import {UserComponent} from './user/user.component';
+import {BillComponent} from './bill/bill.component'
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'product', component: ProductComponent },
+  { path: 'bill', component: BillComponent },
   { path: 'user', component:UserComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forms', component: FormsComponent },
