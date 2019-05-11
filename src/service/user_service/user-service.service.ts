@@ -17,10 +17,10 @@ export class UserServiceService {
         'Content-Type': 'application/json',
         })
       };
-      return this.http.post<any>('http://127.0.0.1:8000/admin/login',user,httpOptions);
+      return this.http.post<any>('https://auctionbackend.herokuapp.com/admin/login',user,httpOptions);
     }
     getUser(): Observable<any[]> {
-      return this.http.get<any[]>('http://127.0.0.1:8000/admin/getuser');
+      return this.http.get<any[]>('https://auctionbackend.herokuapp.com/admin/getuser');
     };
     updateUser(user):Observable<any>{
 
@@ -29,7 +29,7 @@ export class UserServiceService {
         'Content-Type': 'application/json',
         })
       };
-      return this.http.post<any>('http://127.0.0.1:8000/admin/updateuser',user,httpOptions);
+      return this.http.post<any>('https://auctionbackend.herokuapp.com/admin/updateuser',user,httpOptions);
     }
 
 }

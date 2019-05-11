@@ -11,10 +11,10 @@ export class ProductServiceService {
   constructor(private http: HttpClient,  
     private location: Location) { }
   getProducts(): Observable<any[]> {
-    return this.http.get<any[]>('http://127.0.0.1:8000/admin/getproduct');
+    return this.http.get<any[]>('https://auctionbackend.herokuapp.com/admin/getproduct');
   };
   getBill(): Observable<any[]> {
-    return this.http.get<any[]>('http://127.0.0.1:8000/admin/getbill');
+    return this.http.get<any[]>('https://auctionbackend.herokuapp.com/admin/getbill');
   };
   accept(id_product:string):Observable<any>{
     const product={
@@ -25,7 +25,7 @@ export class ProductServiceService {
       'Content-Type': 'application/json',
       })
     };
-    return this.http.post<any>('http://127.0.0.1:8000/admin/product/accept',product,httpOptions);
+    return this.http.post<any>('https://auctionbackend.herokuapp.com/admin/product/accept',product,httpOptions);
   }
   decline(id_product:string):Observable<any>{
     const product={
@@ -36,6 +36,6 @@ export class ProductServiceService {
       'Content-Type': 'application/json',
       })
     };
-    return this.http.post<any>('http://127.0.0.1:8000/admin/product/decline',product,httpOptions);
+    return this.http.post<any>('https://auctionbackend.herokuapp.com/admin/product/decline',product,httpOptions);
   }
 }
